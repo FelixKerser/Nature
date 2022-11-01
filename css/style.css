@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
+* {
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    overflow:hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Backgrounds */
+
+.first-start-bg{
+    position:absolute;
+    height: -webkit-fill-available;
+}
+
+.second-bg{
+    width:100vw;
+    left:0;
+    position:absolute;
+    transform: scale(1.2) translateY(50%); 
+    transition:1.5s;
+}
+
+/*.bg-start-forest{
+    width:100vw;
+    height:100vh;
+    background-image: url('../images/forest.png');
+    background-size: 100%;
+    position: absolute;
+    z-index: -5;
+}
+
+.bg-start-mountains{
+    background-image: url('../images/mountains.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -4;
+}
+
+.bg-start-rock{
+    background-image: url('../images/rock.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}*/
+
+.first-start-bg{
+    display: flex;
+    align-items: center;
+    /*width: 100%;*/
+}
+
+
+.bg-start-forest{
+    zoom:100%;
+    transition: .5s;
+    animation: zoom 2.6s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: .1s; /* Задержка перед началом */
+}
+
+.bg-start-mountains{
+    position:absolute;
+    bottom:1%;
+    left:0%;
+    animation: zoom 1.8s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: .2s; /* Задержка перед началом */
+}
+
+.bg-start-rock{
+    position:absolute;
+    bottom:0%;
+    right: 0%;
+    animation: zoom 1.8s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: .2s; /* Задержка перед началом */
+}
+
+main {
+    padding:45px 130px;
+    z-index: 10;
+}
+
+/* Header */
+
+#header{
+    opacity:0;
+    transition: 1s;
+    animation: show .6s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: .5s; /* Задержка перед началом */
+}
+
+@keyframes show{
+    0%{
+    opacity:0;
+    }
+    100% {
+    opacity:1;
+    }
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1); 
+    }
+    100% {
+        transform: scale(1.3); 
+        right:-7%;
+    }
+}
+
+.logo__name{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    padding-left:100px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+li:first-child{
+    padding-left:0;
+}
+
+.elements{
+    display:flex;
+    height:40px;
+}
+
+.element__li{
+    position:relative;
+}
+
+.element::after{
+    content:'';
+    height:5px;
+    width:5px;
+    background-color:white;
+    position: absolute;
+    left: 50%;
+    bottom:-10px;
+    border-radius: 100px;
+    opacity:0;
+    transition: .2s;
+}
+
+.element:hover::after{
+    opacity:1;
+    width:100%;
+    left:0;
+}
+
+.active::after{
+    opacity:1;
+}
+
+.relative{
+    position:relative;
+}
+
+
+/* Slide Start */
+
+.slide-start{
+    margin-top:60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-start__h1{
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 113px;
+    text-align: center;
+}
+
+.discover__btn{
+    text-align: center;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    border-color: white;
+    padding:9px 78px;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.discover__btn:hover{
+    background-color:white;
+}
+
+.discover__btn span {
+    background-image: url('../images/forest.png');
+    background-position: -28px -6px; /* Смещение фона на величину отступов */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 0 currentColor;
+    transition: text-shadow s ease-in-out;
+  }
+  .discover__btn:hover span { text-shadow: 0 0 0 transparent; }
