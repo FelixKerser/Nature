@@ -16,10 +16,12 @@
 <body>
     
     <div class="first-start-bg">
-            <img src="images/test2.png" class="bg-start-forest">
-            <img src="images/mountains2.png" class="bg-start-mountains">
-            <img src="images/rock2.png" class="bg-start-rock">
+            <img src="images/test2.png" id="forest" class="bg-start-forest">
+            <img src="images/mountains2.png" id="mountains" class="bg-start-mountains">
+            <img src="images/rock2.png" id="rock" class="bg-start-rock">
     </div>
+
+                    
 
                     <main id="header">
 
@@ -37,19 +39,91 @@
 
                         </header>
 
-                        <div class="slide-start">
+                        <div id="ustala">
+                            <div class="slide-start" id="slide-starts">
 
-                            <h1 class="slide-start__h1">
-                                DISCOVER ALL<br/>NATURE WITH US
-                            </h1>
+                                <h1 class="slide-start__h1">
+                                    DISCOVER ALL<br/>NATURE WITH US
+                                </h1>
 
-                            <button onclick="irelandopen()" class="discover__btn"><span>Discover</span></button>
+                                <button onclick="irelandopen()" class="discover__btn"><span>Discover</span></button>
 
+                            </div>
                         </div>
 
 
                         <div class="second-bg" id="ireland_image">
                             <img src="images/Ireland.png" class="bg-second">
+                        </div>
+
+                        <div id="info-ireland">
+                            <span class="counter-slice"></span>
+
+                            <span class="arrows">
+                                <span class="arrow-up"><img onclick="next_slide_up()" src="images/arrow_up.png" class="arrow arrow-up__img"></span>
+                                <span class="arrow-down"><img onclick="next_slide_down()" src="images/arrow_down.png" class="arrow arrow-down__img"></span>
+                            </span>
+
+                            <div class="ireland__all">
+                                <div class="ireland__block">
+                                    <h1 class="ireland__h1">Northen Ireland</h1>
+                                    <span class="ireland__description">Experience the wonder of the wilderness on this full-day private Blue Mountains tour from Sydney. Leave the city lights far behind as you journey into the lush valleys, waterfalls, gorges, mountains, and forests that have shaped life here for tens of thousands of years. You can also opt to add on a visit to Featherdale Wildlife Park or swing by Scenic World and take a trip on the cable car.</span>
+                                </div>
+
+                                <div class="counter-page">
+                                    <span class="counter__span">01</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="third-bg" id="australia_image">
+                            <img src="images/Australia.png" class="bg-third">
+                        </div>
+
+                        <div id="info-australia">
+                            <span class="counter-slice"></span>
+
+                            <span class="arrows" id="list-arrows">
+                                <span class="arrow-up"><img onclick="next_slide_up()" src="images/arrow_up.png" class="arrow arrow-up__img"></span>
+                                <span class="arrow-down"><img onclick="next_slide_down()" src="images/arrow_down.png" class="arrow arrow-down__img"></span>
+                            </span>
+
+                            <div class="ireland__all">
+                                <div class="ireland__block">
+                                    <h1 class="ireland__h1" style="margin-left:0;">Australia</h1>
+                                    <span class="ireland__description">The Blue Mountains is a beautiful area to explore but if you want to get up close and embark upon a real adventure, book this guided abseiling and canyon tour. The first half of the day is spent abseiling, beginning with small cliffs and building up to those more challenging ones. After an included lunch walk to the start of the canyon, wade into a creek, and jump into a rock pool. After some exhilarating water jumps and swims, abseil out of the canyon and into the rock pool below.</span>
+                                </div>
+
+                                <div class="counter-page">
+                                    <span class="counter__span">02</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="fourth-bg" id="wales_image">
+                            <img src="images/wales.png" class="bg-fourth">
+                        </div>
+
+                        <div id="info-wales">
+                            <span class="counter-slice"></span>
+
+                            <span class="arrows" id="arrows-2">
+                                <span class="arrow-up"><img onclick="next_slide_up()" src="images/arrow_up.png" class="arrow arrow-up__img"></span>
+                                <span class="arrow-down"><img src="images/arrow_down.png" class="arrow arrow-down__img" style="opacity:.6;cursor:not-allowed;"></span>
+                            </span>
+
+                            <div class="ireland__all">
+                                <div class="ireland__block">
+                                    <h1 class="ireland__h1" style="margin-left:0;">South Wales</h1>
+                                    <span class="ireland__description">Experience abseiling in the Blue Mountains on this tour from Katoomba. With a guide who provides instruction and encouragement, you'll rappel down a set of cliffs, from 16 feet (5 meters) to 49 feet (15 meters) to a 98-foot (30-meter) drop. During your adventure, don't forget to look around at the surrounding bushland scenery.</span>
+                                </div>
+
+                                <div class="counter-page">
+                                    <span class="counter__span">03</span>
+                                </div>
+                            </div>
                         </div>
 
                     </main>
