@@ -179,3 +179,23 @@ let next_slide_up = function(){
     setTimeout(() => {  info_ireland.style.display = "none"; }, 1500);
   }
 }
+
+let mob_arrow = document.getElementById('bg-menu-arrow__img');
+
+let mob_bg = document.getElementById('bg-menu-mob');
+
+let mob_counter = 1;
+
+let mob_menu = function(){
+    if (mob_counter % 2 === 0){
+      mob_counter++;
+      mob_bg.style.transform = "translateX(100%)";
+      mob_arrow.style.transform = "rotate(-0.25turn)";
+      mob_arrow.style.filter = "invert(0%)";
+    } else {
+      mob_counter++;
+      mob_bg.style.transform = "translateX(0%)";
+      mob_arrow.style.transform = "rotate(90deg)";
+      mob_arrow.style.filter = "invert(100%)";
+    }
+}

@@ -245,11 +245,11 @@ li:first-child{
     background-image: url('../images/forest.png');
     background-position: -28px -6px; /* Смещение фона на величину отступов */
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
     text-shadow: 0 0 0 currentColor;
     transition: text-shadow s ease-in-out;
   }
-.discover__btn:hover span { text-shadow: 0 0 0 transparent; }
+.discover__btn:hover span { -webkit-text-fill-color: black; }
 
 #ustala{
   transition:2s;
@@ -306,6 +306,8 @@ li:first-child{
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
+    text-align: center;
+    font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .counter-slice::before{
@@ -361,4 +363,172 @@ li:first-child{
     position: absolute;
     top: 12%;
     height: 80vh;
+}
+
+#bg-menu-mob, #bg-menu-arrow__img{
+    display: none;
+}
+
+/*Adaptive*/
+
+@media screen and (max-width: 1620px){
+    .bg-start-mountains {
+        bottom: -3%;
+        left: -8%;
+    }
+
+    .bg-start-rock {
+        bottom: 4%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 1480px){
+    .bg-start-mountains {
+        bottom: -5%;
+        left: -6%;
+    }
+
+    .bg-start-rock {
+        bottom: 5%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 1420px){
+    .bg-start-mountains {
+        bottom: -3%;
+        left: -7%;
+    }
+
+    .bg-start-rock {
+        bottom: 4%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width:975px){
+    main{
+        padding: 45px 15px;
+    }
+
+    .bg-start-forest{
+        height: fit-content;
+        min-width: fit-content;
+    }
+
+    .bg-start-mountains {
+        bottom: 4%;
+        left: -53%;
+    }
+
+    .bg-start-rock {
+        bottom: 0%;
+        right: 0%;
+        left: 0;
+    }
+
+    .slide-start__h1{
+        font-size: 65px;
+        line-height: 81px;
+    }
+
+    /*Slides*/
+
+    .ireland__h1{
+        font-size: 67px;
+        line-height: 71px;
+        margin-left: 0px;
+    }
+
+    #info-ireland .arrow{
+        filter: invert(0) !important;
+    }
+
+    .arrows{
+        right: 5%;
+        bottom: 35%;
+    }
+
+    .ireland__block{      
+        margin-right: 20%;
+    }
+
+    .counter__span{
+        display:none;
+    }
+
+    header .logo, header .elements{
+        display:none;
+    }
+
+    #bg-menu-mob{
+        color:black;
+        display:block;
+        width:100%;
+        height:65px;
+        position:absolute;
+        background-color:white;
+        transform:translateX(100%);
+        transition: .3s;
+        z-index: 99;
+    }
+
+    #bg-menu-arrow__img{
+        display: block;
+        filter: invert(0%);
+        position: absolute;
+        z-index: 100;
+        right:25px;
+        width:40px;
+        transform:rotate(-90deg);
+        transition: .3s;
+    }
+
+    .mob-element{
+        color:black;
+    }
+
+    .mob-elements{
+        height:40px;
+        padding-left: 20px;
+    }
+
+    .mob-elements li {
+        padding-left: 18px;
+        font-size:20px;
+    }
+
+    .mob-elements .active{
+        font-weight: 800;
+    }
+
+    .mob-element::after{
+        content:'';
+        position:absolute;
+        top:100%;
+        left:50%;
+        height:5px;
+        width:5px;
+        background-color:black;
+        border-radius:50px;
+        opacity:0;
+    }
+
+    .active::after{
+        opacity:1;
+    }
+
+    .mob-element:hover::after{
+        opacity:1;
+    }
+
+    .mob-element:hover{
+        font-weight: 800;
+        transform:translateY(10px);
+    }
+
+    .ireland__h1{
+        margin-top:0;
+    }
 }
