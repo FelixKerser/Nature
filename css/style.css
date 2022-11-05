@@ -538,5 +538,6 @@ li:first-child{
 
     body {
         position:fixed;
+        height: 100%;
    }
 }
