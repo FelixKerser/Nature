@@ -6,6 +6,10 @@
     overflow:hidden;
 }
 
+@viewport {
+  user-zoom: fixed;
+}
+
 a{
     text-decoration: none;
 }
@@ -531,4 +535,8 @@ li:first-child{
     .ireland__h1{
         margin-top:0;
     }
+
+    body {
+        position:fixed;
+   }
 }
